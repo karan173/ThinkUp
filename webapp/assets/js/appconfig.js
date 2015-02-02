@@ -46,13 +46,10 @@ var TUApplicationSettings = function() {
         var loading_image = new Image();
         loading_image.src = site_root_path + 'assets/img/loading.gif';
 
-        // register on submit event on our form
-        $(document).ready(function() {
-            if (tu_app_settings.DEBUG) {
-                console.debug("app settings tab selected");
-            }
-            tu_app_settings.load_settings();
-        });
+        if (tu_app_settings.DEBUG) {
+            console.debug("app settings tab selected");
+        }
+        tu_app_settings.load_settings();
 
         $('#recaptcha_enable')
                 .click(
